@@ -1,5 +1,7 @@
 language: go
 sudo: required
+rvm:
+  - 2.2
 go:
   - 1.6.3
   - 1.7.1
@@ -19,5 +21,5 @@ script:
   - ./hugo -s docs/
   - ./hugo --renderToMemory -s docs/
 before_install:
-  - gem install asciidoctor -v 1.5.4
+  - gem install asciidoctor
   - sudo pip install docutils
